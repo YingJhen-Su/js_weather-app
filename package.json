@@ -1,0 +1,24 @@
+{
+    "name": "js_weather_app",
+    "version": "1.0.0",
+    "description": "Build a weather forecast page using JavaScript.",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build": "webpack",
+        "serve": "webpack serve"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "css-loader": "^6.10.0",
+        "html-webpack-plugin": "^5.6.0",
+        "mini-css-extract-plugin": "^2.8.0",
+        "sass": "^1.70.0",
+        "sass-loader": "^14.1.0",
+        "webpack": "^5.90.1",
+        "webpack-cli": "^5.1.4",
+        "webpack-dev-server": "^4.15.1"
+    }
+}
