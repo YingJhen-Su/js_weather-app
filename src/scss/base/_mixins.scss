@@ -1,0 +1,17 @@
+@mixin flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin bgStyle {
+    background-color: $BG_LIGHT1;
+    border-radius: $BORDER_RADIUS1;
+    padding: 0.5rem 10px;
+}
+
+@mixin mq($size) {
+    @media screen and (min-width: $size) {
+        @content;
+    }
+}

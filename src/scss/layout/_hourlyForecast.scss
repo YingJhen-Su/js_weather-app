@@ -1,0 +1,41 @@
+.hourlyForecast {
+    &__buttons {
+        @include flexCenter;
+        justify-content: flex-start;
+        gap: 0.5rem;
+        overflow: hidden;
+        cursor: pointer;
+
+        button {
+            min-width: 90px;
+            min-height: 150px;
+            @include bgStyle;
+            @include flexCenter;
+            flex-direction: column;
+            justify-content: space-between;
+            border: 2px solid transparent;
+            outline: none;
+            font: inherit;
+            cursor: inherit;
+
+            @include mq(768px) {
+                min-width: 100px;
+            }
+
+            &:hover,
+            &:focus,
+            &.clicked {
+                border-color: $BG_COLOR2;
+            }
+
+            i {
+                color: $BG_COLOR1;
+                font-size: 2rem;
+            }
+        }
+
+        &.grabbing {
+            cursor: grabbing;
+        }
+    }
+}

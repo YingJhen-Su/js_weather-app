@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3 {
+    font-weight: 500;
+}
+
+html {
+    font-family: "Noto Sans TC", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    background-color: $BG_COLOR1;
+    background-image: linear-gradient(45deg, $BG_COLOR1, $BG_COLOR2);
+
+    @include mq(768px) {
+        font-size: 18px;
+    }
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    @include flexCenter;
+    padding: 0.75rem;
+}
+
+main {
+    width: 100%;
+    max-width: 700px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    @include mq(768px) {
+        gap: 1.125rem;
+    }
+}
+
+footer {
+    font-size: 12px;
+
+    @include mq(768px) {
+        font-size: 14px;
+    }
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+hr {
+    border: 1px solid $HR_COLOR;
+    margin: 0.5rem 0;
+}
+
+.offscreen {
+    position: absolute;
+    left: -10000px;
+}
