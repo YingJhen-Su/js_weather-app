@@ -11,8 +11,8 @@
             min-height: 150px;
             @include bgStyle;
             @include flexCenter;
-            flex-direction: column;
             justify-content: space-between;
+            flex-direction: column;
             border: 2px solid transparent;
             outline: none;
             font: inherit;
