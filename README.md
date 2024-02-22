@@ -28,6 +28,7 @@ Users should be able to:
 -   Switch different city
 -   See all weather forecast in a horizontal slider
 -   Switch different forecast period
+-   Get the weather forecast of the previously selected city
 
 ### Screenshot
 
@@ -169,7 +170,7 @@ module.exports = {
 
 ### Useful resources
 
--   [中央氣象署開放資料平臺之資料擷取 API](https://opendata.cwa.gov.tw/dist/opendata-swagger.html?urls.primaryName=openAPI#/%E9%A0%90%E5%A0%B1/get_v1_rest_datastore_F_D0047_089)
+-   [中央氣象署開放資料平臺之資料擷取 API](https://opendata.cwa.gov.tw/dist/opendata-swagger.html)
 -   [Build a Weather App with Vanilla Javascript](https://www.youtube.com/watch?v=s_Ie_yh_4Co&list=PL0Zuz27SZ-6PA3nkkEAr91n4bK-NunwPU&index=1)
 -   [Webpack 5 Crash Course](https://www.youtube.com/watch?v=IZGNcSuwBZs)
 
