@@ -10,6 +10,7 @@ import {
     getHourlyForecastFromApi,
 } from "./dataFunctions";
 
+// init function
 const initApp = () => {
     // load button list
     const selectOption = loadCityOption(CITYDATA);
@@ -28,7 +29,7 @@ const initApp = () => {
     handleDefaultClick(selectOption);
 };
 
-// 處理city按鈕點擊
+// 處理city按鈕點擊 or 關閉menu
 const toggleCity = () => {
     const cityBtn = document.getElementById("selectBox__btn");
     cityBtn.classList.toggle("clicked");
@@ -49,6 +50,7 @@ const handleCitySelect = async (event) => {
         }
 
         if (btn.contains(event.target)) {
+            // btn顯示城市名
             document.getElementById("selectBox__city").innerHTML =
                 CITYDATA[index].city;
             btn.classList.add("selected");
@@ -80,17 +82,17 @@ const handleCitySelect = async (event) => {
 
 // 處理焦點轉移
 const handleBlur = (event) => {
-    console.log("焦點轉移");
-
-    // city按鈕開啟&焦點離開
+    // city按鈕開啟 & 焦點離開
+    const target = event.target;
     const cityBtn = document.getElementById("selectBox__btn");
-    const cityOption = cityBtn.nextElementSibling;
+    const selectOption = cityBtn.nextElementSibling;
+
     if (
         cityBtn.classList.contains("clicked") &&
-        !cityBtn.contains(event.target) &&
-        !cityOption.contains(event.target)
+        !cityBtn.contains(target) &&
+        !selectOption.contains(target)
     ) {
-        cityBtn.classList.remove("clicked");
+        toggleCity();
     }
 };
 
