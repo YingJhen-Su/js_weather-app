@@ -129,7 +129,7 @@ export const updateWeatherObserve = (result) => {
             weatherData.AirTemperature !== "x" &&
             weatherData.AirTemperature !== -99 &&
             weatherData.Weather !== "x" &&
-            weatherData.Weather !== -99
+            weatherData.Weather !== "-99"
         ) {
             observeData = `${Math.round(weatherData.AirTemperature)}°C ‧ ${
                 weatherData.Weather
