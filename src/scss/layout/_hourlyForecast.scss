@@ -10,6 +10,7 @@
             min-width: 90px;
             min-height: 150px;
             @include bgStyle;
+            color: inherit;
             @include flexCenter;
             justify-content: space-between;
             flex-direction: column;

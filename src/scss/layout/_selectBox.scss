@@ -10,6 +10,7 @@
         outline: none;
         font: inherit;
         background-color: $BG_DARK1;
+        color: inherit;
         border-radius: $BORDER_RADIUS2;
         cursor: pointer;
 
@@ -49,6 +50,7 @@
             font: inherit;
             text-align: left;
             background-color: transparent;
+            color: inherit;
             cursor: pointer;
 
             @include mq(768px) {
