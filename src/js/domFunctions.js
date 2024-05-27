@@ -52,23 +52,19 @@ const dragMove = (event) => {
 const handleForecastClick = (slider, target) => {
     const allButtons = slider.querySelectorAll("button");
 
-    let currentIndex = prevIndex;
     allButtons.forEach((btn, index) => {
+        btn.classList.remove("clicked");
+
         if (btn.contains(target) && index !== prevIndex) {
-            currentIndex = index;
+            prevIndex = index;
 
             // update forecast
             updateWeatherForecast(btn.dataset.index);
         }
     });
 
-    if (currentIndex !== prevIndex) {
-        allButtons.forEach((btn) => {
-            btn.classList.remove("clicked");
-        });
-        allButtons[currentIndex].classList.add("clicked");
-        prevIndex = currentIndex;
-    }
+    // 處理border顯示
+    allButtons[prevIndex].classList.add("clicked");
 };
 
 // 用鍵盤tab在button間移動並以enter執行click
