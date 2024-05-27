@@ -7,29 +7,33 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 <body>
-    <main>
-        <h1 class="offscreen">Weather App & 24 Hour Forecast</h1>
+    <div class="container">
+        <header>
+            <h1 class="offscreen">Weather App & 24 Hour Forecast</h1>
+        </header>
+        
+        <main>
+            <section id="selectBox" class="selectBox">
+                <button id="selectBox__btn" class="selectBox__btn">
+                    <span id="selectBox__city" class="selectBox__city"></span>
+                    <i class="bi bi-caret-down-fill"></i>
+                </button>
+            </section>
 
-        <section id="selectBox" class="selectBox">
-            <button id="selectBox__btn" class="selectBox__btn">
-                <span id="selectBox__city" class="selectBox__city"></span>
-                <i class="bi bi-caret-down-fill"></i>
-            </button>
-        </section>
+            <section class="weatherObserve">
+                <p id="weatherObserve__temp" class="weatherObserve__temp"></p>
+                <button>
+                    <i class="bi bi-info-circle"></i>
+                </button>
+                <p class="information">* 當下溫度與天氣狀況多取自縣市政府所在區域測站資料</p>
+            </section>
 
-        <section class="weatherObserve">
-            <p id="weatherObserve__temp" class="weatherObserve__temp"></p>
-            <button>
-                <i class="bi bi-info-circle"></i>
-            </button>
-            <p class="information">* 當下溫度與天氣狀況多取自縣市政府所在區域測站資料</p>
-        </section>
+            <section id="hourlyForecast" class="hourlyForecast">
+            </section>
 
-        <section id="hourlyForecast" class="hourlyForecast">
-        </section>
-
-        <section id="weatherForecast" class="weatherForecast">
-        </section>
+            <section id="weatherForecast" class="weatherForecast">
+            </section>
+        </main>
         
         <footer>
             <p>
@@ -38,6 +42,6 @@
             </p>
             <p>使用<a href="https://opendata.cwa.gov.tw/index" target="_blank">中央氣象署氣象資料開放平臺API</a></p>
         </footer>
-    </main>
+    </div>
 </body>
 </html>

@@ -1,4 +1,6 @@
-* {
+*,
+*::after,
+*::before {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -31,9 +33,12 @@ body {
     padding: 0.75rem;
 }
 
-main {
+.container {
     width: 100%;
     max-width: 700px;
+}
+
+main {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
@@ -45,9 +50,11 @@ main {
 
 footer {
     font-size: 12px;
+    margin-top: 1.5rem;
 
     @include mq(768px) {
         font-size: 14px;
+        margin-top: 1.125rem;
     }
 }
 
