@@ -19,11 +19,15 @@ const initApp = () => {
     const cityBtn = document.getElementById("selectBox__btn");
     cityBtn.addEventListener("click", toggleCity);
 
+    // 處理information按鈕點擊
+    const informationBtn = document.getElementById("information__btn");
+    informationBtn.addEventListener("click", toggleInformation);
+
     // 處理city選擇 listen list click
     selectOption.addEventListener("click", handleCitySelect);
 
-    // 處理焦點轉移 (離開city按鈕)
-    document.body.addEventListener("click", handleBlur);
+    // 處理焦點轉移 (離開cityc或information按鈕)
+    document.addEventListener("click", handleBlur);
 
     // 預設點擊
     handleDefaultClick(selectOption);
@@ -33,6 +37,12 @@ const initApp = () => {
 const toggleCity = () => {
     const cityBtn = document.getElementById("selectBox__btn");
     cityBtn.classList.toggle("clicked");
+};
+
+// 處理information按鈕點擊
+const toggleInformation = () => {
+    const informationBtn = document.getElementById("information__btn");
+    informationBtn.classList.toggle("clicked");
 };
 
 // listen list click
@@ -82,8 +92,9 @@ const handleCitySelect = async (event) => {
 
 // 處理焦點轉移
 const handleBlur = (event) => {
-    // city按鈕開啟 & 焦點離開
     const target = event.target;
+
+    // city按鈕開啟 & 焦點離開
     const cityBtn = document.getElementById("selectBox__btn");
     const selectOption = cityBtn.nextElementSibling;
 
@@ -93,6 +104,18 @@ const handleBlur = (event) => {
         !selectOption.contains(target)
     ) {
         toggleCity();
+    }
+
+    // information按鈕開啟 & 焦點離開
+    const informationBtn = document.getElementById("information__btn");
+    const informationText = informationBtn.nextElementSibling;
+
+    if (
+        informationBtn.classList.contains("clicked") &&
+        !informationBtn.contains(target) &&
+        !informationText.contains(target)
+    ) {
+        toggleInformation();
     }
 };
 

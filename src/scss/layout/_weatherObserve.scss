@@ -5,7 +5,7 @@
     align-items: start;
     gap: 6px;
 
-    button {
+    .information__btn {
         border: none;
         outline: none;
         background-color: transparent;
@@ -17,11 +17,14 @@
         }
 
         &:hover,
-        &:focus {
+        &:focus,
+        &.clicked {
             i {
                 color: $BG_COLOR2;
             }
+        }
 
+        &.clicked {
             + .information {
                 display: block;
             }
